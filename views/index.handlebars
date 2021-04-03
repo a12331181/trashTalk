@@ -1,0 +1,49 @@
+<div class="container my-2 p-1 d-flex flex-column justify-content-around">
+  <span class="my-2">
+    <h1 class="text-center">今天，你想對誰說幹話呢？</h1>
+  </span>
+
+  <form action="/" method="POST">
+    <fieldset class="form-group" id="selection" name="selection">
+      <div class="card-container d-flex justify-content-around">
+        <div class="card" style="width: 18rem;">
+          <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5668/angry-developer.jpg"
+            class="card-img-top" alt="工程師">
+          <div class="card-body">
+            <label for="engineer">工程師</label>
+            <input name="jobSelection" id="engineer" type="radio" value="engineer" {{#if engineer}} checked {{/if}} />
+          </div>
+        </div>
+
+        <div class="card" style="width: 18rem;">
+          <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5667/angry-designer.jpg"
+            class="card-img-top" alt="設計師">
+          <div class="card-body">
+            <label for="designer">設計師</label>
+            <input name="jobSelection" id="designer" type="radio" value="designer" {{#if designer}} checked {{/if}} />
+          </div>
+        </div>
+
+        <div class="card" style="width: 18rem;">
+          <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5669/angry-founder.jpg"
+            class="card-img-top" alt="創業家">
+          <div class="card-body">
+            <label for="entrepreneur">創業家</label>
+            <input name="jobSelection" id="entrepreneur" type="radio" value="entrepreneur" {{#if entrepreneur}} checked
+              {{/if}} />
+          </div>
+        </div>
+      </div>
+    </fieldset>
+
+    <div class="content-container d-flex justify-content-start">
+      <div>
+        <button type="submit" class="btn btn-outline-primary">產生幹話</button>
+      </div>
+      <div>
+        <label for="description"></label>
+        <textarea id="description" style="width:800px;height:200px;">{{ sentence }}</textarea>
+      </div>
+    </div>
+  </form>
+</div>
