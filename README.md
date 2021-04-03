@@ -14,7 +14,7 @@ git clone https://github.com/a12331181/trashTalk.git
 ##### Enter project directory
 
 ```
-cd words_generator
+cd trashTalk
 ```
 
 ##### Install packages
